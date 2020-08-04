@@ -10,7 +10,7 @@ def load_images(filenames):
         
         # Adjust channel dimension to work with torch.
         temp_image = np.transpose(temp_image, (2,0,1))
-        images.append(temp_image)
+        images.append(temp_image[:3])
 
     return np.array(images)
 
